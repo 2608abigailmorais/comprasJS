@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Compras</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <script>
+
+alert ("Bem-vindo ao Mercado! Por favor realize o seu Login.");
+      
+      function login(){
+        document.getElementById("visitante").innerHTML = document.getElementById("nome").value;
+      }
+      function alimento(acao) {
+        var batata = parseInt(document.getElementById("batata").innerHTML);
+        var precoBatata = parseFloat(document.getElementById("precoBatata").innerHTML);
+        var ovo = parseInt(document.getElementById("ovo").innerHTML);
+        var precoOvo = parseFloat(document.getElementById("precoOvo").innerHTML);
+
+        switch(acao){
+                case 'batataMa':
+                  document.getElementById("batata").innerHTML = batata + 1;
+                  document.getElementById("precoBatata").innerHTML = precoBatata + 1.80;
+                  break;
+                case 'batataMe':
+                  document.getElementById("batata").innerHTML = batata - 1;
+                  document.getElementById("precoBatata").innerHTML = precoBatata - 1.80;
+
+                  break;
+                case 'ovoMa':
+                  document.getElementById("ovo").innerHTML = ovo + 1;
+                  document.getElementById("precoOvo").innerHTML = precoOvo + 1.50;
+                  break;
+                case 'ovoMe':
+                  document.getElementById("ovo").innerHTML = ovo - 1;
+                  document.getElementById("precoOvo").innerHTML = precoOvo - 1.50;
+                  break;
+            }
+      }
+
+      function fim(){
+        window.location.href = window.location.href;
+      }
+    </script>
+</head>
+<body>
+  <div class="separar">
+      <div class="separar2">
+  <header>
+
+    <form>
+
+
+        <div style="text-align:right";>
+        <input type="text" class="form-control" required type="text" name="nome" id="nome" placeholder="Digite o seu nome" value="">
+        <button type="button" class="btn btn-dark" id="" value="log" onclick="login()">Logar</button></div>
+        <br>
+        <table class="table table-light" border="3">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="3"><img src="img/batata.png" height = 200></th>
+              <td>Uma unidade de Batata</td>
+              <td><button type="button" class="btn btn-dark" onclick="alimento('batataMa')">+</button></td>
+              <td></td>
+              <td>Preço Total</td>
+            </tr>
+            <tr>
+              <td>Preço: 1.80</td>
+              <td id="batata">0</td>
+              <td>R$</td>
+              <td id="precoBatata">0.00</td>
+            </tr>
+            <tr>
+              <td></td>
+              
+            <td><button type="button" class="btn btn-dark" onclick="alimento('batataMe')">-</button></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <table class="table table-light" border="3">
+              <thead>
+
+                <tr>
+                  <th scope="row" rowspan="4"><img src="img/ovo.png" height = 200></th>
+                  <td>Uma unidade de Ovo</td>
+                  <td><button type="button" class="btn btn-dark" onclick="alimento('ovoMa')">+</button></td>
+                  <td></td>
+                  <td>Preço Total</td>
+                </tr>
+                <tr>
+                  <td>Preço: 1.50</td>
+                  <td id="ovo">0</td>
+                  <td>R$</td>
+                  <td id="precoOvo">0.00</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  
+                <td><button type="button" class="btn btn-dark" onclick="alimento('ovoMe')">-</button></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <table>
+        <br>
+        <button type="button" class="btn btn-dark" id="" value="log" onclick="fim();alert('Compra Finalizada, obrigado por comprar conosco!')">Compra concluída</button>
+    </form>
+    <br><br>
+    </content>
+  </div></div>
+</body>
+</html>
