@@ -1,0 +1,18 @@
+
+body{
+	background-color: #dcdcdc;
+	color: black;
+}
+
+div.separar{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+div.separar2{
+	padding: 3%;
+	background-color: #cfcfc4;
+	border-radius: 25px;
+}
